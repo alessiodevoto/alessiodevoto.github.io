@@ -12,20 +12,20 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 ## Hi 👋
 
-👨‍🔬 I am an Applied Researcher at NVIDIA, working with the Applied Agents Research and Kaggle Grandmasters teams.
+👨‍🔬 I am an **Applied Researcher at NVIDIA**, working with the Applied Agents Research and Kaggle Grandmasters teams.
 
-🎓 I completed my PhD in Data Science at Sapienza University of Rome, where my research focused on efficient and interpretable machine learning, under the supervision of [Simone Scardapane](https://www.sscardapane.it).
+🎓 I completed my **PhD in Data Science at Sapienza University of Rome**, where my research focused on efficient and interpretable machine learning, under the supervision of [Simone Scardapane](https://www.sscardapane.it).
 
-🏴 I was previously a visiting researcher at Edinburgh NLP, supervised by [Pasquale Minervini](https://neuralnoise.com/).
+🏴 I was previously a **visiting researcher at Edinburgh NLP**, supervised by [Pasquale Minervini](https://neuralnoise.com/).
 
-🔬 My research background spans both Computer Vision and Natural Language Processing, focusing on making AI systems more efficient and interpretable. My current research interests include efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI Interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive & Conditional Computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
+🔬 My research background spans both Computer Vision and Natural Language Processing, focusing on making AI systems more efficient and interpretable. My current research interests include **efficient training and inference for Language and Vision Models** [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], **AI Interpretability** [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], **Adaptive & Conditional Computation methods** [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
 
 ## Blog
-📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!nsights** on deep learning, transformers, and efficiency-oriented methods. Feel free to [take a look](https://alessiodevoto.github.io/blog/)!
+📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
 
 ## Beyond Research
 
-* 📈 Training as a certified Life & Business Coach (International Coaching Federation)
+* 📈 Training as a certified Life & ** Business Coach** (International Coaching Federation)
 * 🇪🇸 Former Erasmus student at [Universidad Politécnica de Valencia](http://www.upv.es/es), Spain
 * 🏛️ Passionate about languages (even [dead ones!](https://www.sssscomic.com/comicpages/196.jpg)) — I teach Ancient Greek and Latin to high school and college students
 
