@@ -25,8 +25,8 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 ## Beyond Research
 
-* 📈 Training as a **certified Life & Business Coach** (International Coaching Federation)
-* 🇪🇸 Former **Erasmus student** at [Universidad Politécnica de Valencia](http://www.upv.es/es), Spain
+* 📈 Training as a certified Life & Business Coach (International Coaching Federation)
+* 🇪🇸 Former Erasmus student at [Universidad Politécnica de Valencia](http://www.upv.es/es), Spain
 * 🏛️ Passionate about languages (even [dead ones!](https://www.sssscomic.com/comicpages/196.jpg)) — I teach Ancient Greek and Latin to high school and college students
 
 <script type="text/javascript" async
