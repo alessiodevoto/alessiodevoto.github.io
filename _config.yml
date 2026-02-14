@@ -106,10 +106,10 @@ analytics:
 author:
   name             : #"Alessio Devoto, PhD"
   avatar           : "/assets/images/alessio_pp_standard.jpg"
-  bio              : "Computer Engineer <br> 
-                      PhD candidate in Data Science <br> <br> 
-                      <a href='https://classicalanthology.theclassicslibrary.com/2012/05/30/odyssey-1-1-6/'> 📖 <u> Ἄνδρα μοι ἔννεπε, Μοῦσα, πολύτροπον </u> <a>" 
-  location         : "La Sapienza, University of Rome <br>"
+  bio              : "Applied Agent Researcher @ NVIDIA <br>
+                      PhD in Data Science <br> <br>
+                      <a href='https://classicalanthology.theclassicslibrary.com/2012/05/30/odyssey-1-1-6/'> 📖 <u> Ἄνδρα μοι ἔννεπε, Μοῦσα, πολύτροπον </u> <a>"
+  location         : "Zurich, Switzerland"
   email            : 
   links:
     - label: "X"
