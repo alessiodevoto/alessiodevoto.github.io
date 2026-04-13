@@ -25,7 +25,7 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 ## Beyond Research
 
-* 📈 Training as a certified Life & ** Business Coach** (International Coaching Federation)
+* 📈 Training as a certified Life & **Business Coach** (International Coaching Federation)
 * 🇪🇸 Former Erasmus student at [Universidad Politécnica de Valencia](http://www.upv.es/es), Spain
 * 🏛️ Passionate about languages (even [dead ones!](https://www.sssscomic.com/comicpages/196.jpg)) — I teach Ancient Greek and Latin to high school and college students
 
@@ -35,7 +35,7 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 ## Latest Publications
 
-These are some of my recent publications. For a complete list, pleasecheck  my [Google Scholar](https://scholar.google.com/citations?user=er31rp0AAAAJ&hl=en).
+These are some of my recent publications. For a complete list, please check my [Google Scholar](https://scholar.google.com/citations?user=er31rp0AAAAJ&hl=en).
 
 * [Attention Sinks in Diffusion Language Models](https://arxiv.org/abs/2510.15731) (2025)
 * [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries](https://arxiv.org/abs/2510.00636) (2025)
