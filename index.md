@@ -12,7 +12,7 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 ## Hi 👋
 
-👨‍🔬 I work as an **Applied Researcher** at **NVIDIA**, building with the **Applied Agents Research** and **Kaggle Grandmasters** teams.
+👨‍🔬 **I build AI agents at NVIDIA**, with the **Applied Agents Research** and **Kaggle Grandmasters** teams.
 
 🎓 I completed my **PhD in Data Science at Sapienza University of Rome**, where my research focused on efficient and interpretable machine learning, under the supervision of [Simone Scardapane](https://www.sscardapane.it).
 
