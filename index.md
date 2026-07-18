@@ -18,7 +18,7 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 
 🏴 I was previously a **visiting researcher at Edinburgh NLP**, supervised by [Pasquale Minervini](https://neuralnoise.com/).
 
-🔬 My research background spans both Computer Vision and Natural Language Processing. My current research interests include **AI agents**, **alignment & interpretability** [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], **diffusion language models** [[6](https://arxiv.org/abs/2510.15731), [7](https://arxiv.org/abs/2607.01774)], **efficient LLM inference** [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], and **adaptive computation** [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
+🔬 My research background spans both Computer Vision and Natural Language Processing. My current research interests include **AI agents**, **alignment & interpretability** [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], **diffusion language models** [[6](https://arxiv.org/abs/2510.15731), [7](https://arxiv.org/abs/2607.01774)], **efficient LLM inference** [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], and **adaptive computation** [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193), [8](https://arxiv.org/abs/2509.00454)].
 
 ## Blog
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
@@ -40,6 +40,7 @@ These are some of my recent publications. For a complete list, please check my [
 * [Subliminal Clocks: Latent Time Modelling in Diffusion Language Models](https://arxiv.org/abs/2607.01774) (2026)
 * [Attention Sinks in Diffusion Language Models](https://arxiv.org/abs/2510.15731) (2025)
 * [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries](https://arxiv.org/abs/2510.00636) (2025)
+* [Universal Properties of Activation Sparsity in Modern Large Language Models](https://arxiv.org/abs/2509.00454) (2025)
 * [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 * [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
 * [Q-Filters: Leveraging QK Geometry for Efficient KV Cache Compression](https://arxiv.org/abs/2503.02812)(SLLM @ ICLR 2025)
