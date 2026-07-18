@@ -40,7 +40,7 @@ These are some of my recent publications. For a complete list, please check my [
 * [Subliminal Clocks: Latent Time Modelling in Diffusion Language Models](https://arxiv.org/abs/2607.01774) (2026)
 * [Attention Sinks in Diffusion Language Models](https://arxiv.org/abs/2510.15731) (2025)
 * [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries](https://arxiv.org/abs/2510.00636) (2025)
-* [Universal Properties of Activation Sparsity in Modern Large Language Models](https://arxiv.org/abs/2509.00454) (2025)
+* [Universal Properties of Activation Sparsity in Modern Large Language Models](https://arxiv.org/abs/2509.00454) (ICLR 2026)
 * [Adaptive Computation Modules: Granular Conditional Computation For Efficient Inference](https://arxiv.org/abs/2312.10193) (AAAI 2025)
 * [A Simple and Effective $$ L_2 $$ Norm-Based Strategy for KV Cache Compression](https://arxiv.org/abs/2406.11430) (EMNLP 2024)
 * [Q-Filters: Leveraging QK Geometry for Efficient KV Cache Compression](https://arxiv.org/abs/2503.02812)(SLLM @ ICLR 2025)
