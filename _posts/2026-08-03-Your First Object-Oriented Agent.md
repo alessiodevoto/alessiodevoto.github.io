@@ -40,7 +40,7 @@ model = get_llm_client("gpt-5-mini", api_key="your-api-key")                    
 
 ---
 
-### A Barista Agent
+### Your First Agent
 
 Let's define our first agent. In NOOA, you build an agent by subclassing `Agent` — the only required argument is the LLM that will power it. Here is a complete, working agent. It's small enough to read every line.
 
@@ -103,7 +103,7 @@ A creamy cappuccino would be lovely with a cornetto—soft foam, gentle espresso
 
 ---
 
-### Adding Tools
+### Adding Tools (That Is, Adding Class Methods)
 
 The barista just offered a strong caffeine kick — but it's 9pm and a double espresso is definitely not the move. How do we teach the agent to respect a "no caffeine after 4pm" policy?
 
