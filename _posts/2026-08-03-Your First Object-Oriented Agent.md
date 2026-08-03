@@ -33,10 +33,9 @@ Pick a provider below. Replace `"your-api-key"` with a real key for hosted provi
 from nooa.unifiedllm.registry import get_llm_client
 
 # model = get_llm_client("claude-haiku-4-5", api_key="your-api-key")                                        # Anthropic
-# model = get_llm_client("gpt-5-mini", api_key="your-api-key")                                              # OpenAI
 # model = get_llm_client("ollama_chat/qwen3:1.7b", api_base="http://localhost:11434")                       # Ollama (local, no key)
 # model = get_llm_client("hosted_vllm/Qwen/Qwen3-1.7B", api_base="http://localhost:8000/v1")                # vLLM (local, no key)
-model = get_llm_client("gpt-5-mini", api_key="your-api-key", api_base="https://api.openai.com/v1")  # OpenAI
+model = get_llm_client("gpt-5-mini", api_key="your-api-key")                                              # OpenAI
 ```
 
 ---
