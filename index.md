@@ -4,9 +4,9 @@ layout: single
 classes: wide
 author_profile: true
 title: ''
-seo_title: "Alessio Devoto | Applied Researcher at NVIDIA – Efficient & Interpretable AI"
-excerpt: "Applied Researcher at NVIDIA working on efficient, adaptive, and interpretable machine learning."
-seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on efficient training and inference for language and vision models, adaptive computation, and AI interpretability."
+seo_title: "Alessio Devoto | AI Agents Researcher at NVIDIA – NOOA & kvpress"
+excerpt: "Building AI agents at NVIDIA. Contributor to NVIDIA Object-Oriented Agents (NOOA) and kvpress."
+seo_description: "Alessio Devoto is a researcher at NVIDIA and co-author of NVIDIA Object-Oriented Agents (NOOA) and kvpress (KV cache compression). His research focuses on AI agents, diffusion language models, alignment, interpretability, and efficient LLM inference."
 
 ---
 
@@ -17,6 +17,8 @@ seo_description: "Alessio Devoto is an Applied Researcher at NVIDIA, focusing on
 🎓 I completed my **PhD in Data Science at Sapienza University of Rome**, where my research focused on efficient and interpretable machine learning, under the supervision of [Simone Scardapane](https://www.sscardapane.it).
 
 🏴 I was previously a **visiting researcher at Edinburgh NLP**, supervised by [Pasquale Minervini](https://neuralnoise.com/).
+
+🛠️ Beyond research, I love open source. I'm a contributor to **[NVIDIA Object-Oriented Agents (NOOA)](https://github.com/NVIDIA-NeMo/labs-OO-Agents)**, a Pythonic framework for building AI agents, and **[kvpress](https://github.com/NVIDIA/kvpress)**, a library for LLM KV cache compression.
 
 🔬 My research background spans both Computer Vision and Natural Language Processing. My current research interests include **AI agents** [[9](https://arxiv.org/abs/2607.20709), [GitHub](https://github.com/NVIDIA-NeMo/labs-OO-Agents)], **alignment & interpretability** [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], **diffusion language models** [[6](https://arxiv.org/abs/2510.15731), [7](https://arxiv.org/abs/2607.01774)], **efficient LLM inference** [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], and **adaptive computation** [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193), [8](https://arxiv.org/abs/2509.00454)].
 
