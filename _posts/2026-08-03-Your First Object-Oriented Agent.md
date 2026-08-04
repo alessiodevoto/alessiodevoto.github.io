@@ -4,6 +4,7 @@ classes: wide
 author_profile: true
 title: "Your First Object-Oriented Agent"
 seo_title: "Build your first AI agent with NOOA — tools, typing, and state in plain Python"
+excerpt: "Build a BaristaAgent with NOOA — tools, typed outputs, and state in plain Python."
 published: true
 ---
 
