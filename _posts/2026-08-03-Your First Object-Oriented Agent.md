@@ -9,7 +9,7 @@ published: true
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alessiodevoto/labs-OO-Agents/blob/first-notebook-openai/notebook_tutorials/01_your_first_agent.ipynb) &nbsp; [![GitHub](https://img.shields.io/badge/notebook-GitHub-black?logo=github)](https://github.com/alessiodevoto/labs-OO-Agents/blob/first-notebook-openai/notebook_tutorials/01_your_first_agent.ipynb)
 
-> This tutorial walks you through the core ideas behind [NOOA](https://github.com/NVIDIA-NeMo/labs-OO-Agents) (Native Object-Oriented Agents). We'll build a `BaristaAgent` that recommends drinks to sleepy customers. Along the way we'll see that a NOOA agent is **just a Python object** — you add tools by adding methods, spin up new agents by instantiating the class, and strongly type its outputs like any regular Python function.
+> This tutorial walks you through the core ideas behind [NOOA](https://github.com/NVIDIA-NeMo/labs-OO-Agents) (NVIDIA Object-Oriented Agents). We'll build a `BaristaAgent` that recommends drinks to sleepy customers. Along the way we'll see that a NOOA agent is **just a Python object** — you add tools by adding methods, spin up new agents by instantiating the class, and strongly type its outputs like any regular Python function.
 
 We're not going to sell you on a whole new paradigm — you won't walk away having learned some exotic new way to build software. What you *will* walk away with is plain Python, plus a small sprinkle of magic.
 
