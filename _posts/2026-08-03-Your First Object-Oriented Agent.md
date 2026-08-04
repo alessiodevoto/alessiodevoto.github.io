@@ -17,10 +17,10 @@ We're not going to sell you on a whole new paradigm — you won't walk away havi
 
 ### Prerequisites
 
-Install NOOA from GitHub with [uv](https://docs.astral.sh/uv/):
+Install NOOA:
 
 ```bash
-uv add "nooa @ git+https://github.com/NVIDIA-NeMo/labs-OO-Agents.git@main"
+pip install nooa
 ```
 
 NOOA is compatible with any LiteLLM-supported model — hosted or local. For hosted providers, you'll need an API key. Local providers (Ollama, vLLM, any OpenAI-compatible endpoint) need no API key, just an `api_base`.
