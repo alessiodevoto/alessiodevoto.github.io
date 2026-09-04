@@ -16,7 +16,7 @@ A larger context window helps, but it does not solve the problem. Long context c
 
 The maximum context window and the useful context window are not the same thing.
 
-Practitioners sometimes call the unreliable part of the window the **dumb zone**. The phrase shows up in HumanLayer/Dex Horthy’s material on [advanced context engineering for coding agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md), in posts that contrast the [smart zone and dumb zone](https://www.quevin.ai/blog/2025-12-13-context-engineering-smart-zone), and in broader summaries of [context-window management](https://agentpatterns.ai/context-engineering/context-window-dumb-zone/). I would treat this as a useful operational metaphor, not as a fixed benchmark threshold: where degradation starts depends on the model, the task, and the amount of noise in the trajectory.
+Practitioners sometimes call the unreliable part of the window the **dumb zone**, as opposed to the **smart zone** where the model is still reliable. The phrase comes from HumanLayer/Dex Horthy’s work on [advanced context engineering for coding agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) and has since spread to other [write-ups on context-window management](https://www.quevin.ai/blog/2025-12-13-context-engineering-smart-zone). I would treat it as a useful operational metaphor, not a fixed benchmark threshold: where degradation starts depends on the model, the task, and the amount of noise in the trajectory.
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/agent-context/context-dumb-zone.svg" alt="Diagram showing a context window with a useful smart zone, a dumb zone, and hard limit pressure" style="max-width: 100%; width: 900px; display: block; margin: 1.5rem auto;">
 
@@ -70,7 +70,7 @@ This does not mean removing the harness. Modern harnesses still implement a larg
 
 Context management may therefore require both: the harness enforces the budget, while the agent decides how to spend it.
 
-This is already becoming a research direction. So far, I would group the attempts into two broad directions.
+This is already a research direction, and I would group the attempts so far into two broad approaches.
 
 The first is training, distilling, or RL-ing the model to manage context. [AgentFold](https://arxiv.org/abs/2510.24699) and [Context-Folding](https://arxiv.org/abs/2510.11967) turn folding or compression into agent actions. [ACM](https://arxiv.org/abs/2607.23809) and [ContextPilot](https://arxiv.org/abs/2608.28476) add context offloading and retrieval tools, then teach the agent when to use them.
 
