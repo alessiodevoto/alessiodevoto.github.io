@@ -14,7 +14,7 @@ The model might be capable of solving the task. But if the relevant observation 
 
 A larger context window helps, but it does not solve the problem. Long context comes with a bunch of issues. One is [lost in the middle](https://arxiv.org/abs/2307.03172): models can be much worse at using relevant information when it appears in the middle of a long prompt than when it appears near the beginning or the end. More recent work shows something even less convenient: [context length alone can hurt performance](https://arxiv.org/abs/2510.05381), even when the model retrieves the relevant information correctly and the additional tokens contain almost no distraction. This degradation is often called [context rot](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents): as context grows, the model gradually becomes less effective at using it.
 
-The maximum context window and the useful context window are not the same thing.
+**The maximum context window and the useful context window are not the same thing.**
 
 Practitioners sometimes call the unreliable part of the window the **dumb zone**, as opposed to the **smart zone** where the model is still reliable. The phrase comes from HumanLayer/Dex Horthy’s work on [advanced context engineering for coding agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) and has since spread to other [write-ups on context-window management](https://www.quevin.ai/blog/2025-12-13-context-engineering-smart-zone). I would treat it as a useful operational metaphor, not a fixed benchmark threshold: where degradation starts depends on the model, the task, and the amount of noise in the trajectory.
 
@@ -24,23 +24,11 @@ Practitioners sometimes call the unreliable part of the window the **dumb zone**
 
 Different approaches attack this problem at different levels.
 
-### Runtime-level compression
+At the **runtime level**, [KV cache compression](https://github.com/NVIDIA/kvpress) operates below the text seen by the agent. It prunes, merges, or quantizes cached key-value representations, reducing memory usage and decoding cost without rewriting the conversation. The prompt still looks the same, but the model retains only an approximation of its internal representation. This has become a prolific research field over the past few years, but turning the memory savings reported in papers into actual latency and throughput gains is much harder. Production inference engines rely on paged memory, fused attention kernels, continuous batching, prefix caching, and CUDA graphs, and changing the shape or precision of the cache can require modifications across this entire stack. As a recent [survey of system-aware KV cache optimization](https://arxiv.org/abs/2607.08057) notes, lower memory usage does not automatically produce end-to-end gains: the result also depends on conversion costs, kernel boundaries, and how well the method is integrated into the runtime.
 
-[KV cache compression](https://github.com/NVIDIA/kvpress) operates below the text seen by the agent. It prunes, merges, or quantizes cached key-value representations, reducing memory usage and decoding cost without rewriting the conversation. The prompt still looks the same, but the model retains an approximation of its internal representation.
+At the **architecture level**, the model itself is redesigned to need less cache in the first place. [Multi-head Latent Attention](https://arxiv.org/abs/2405.04434) compresses the keys and values of each token into a lower-dimensional latent representation. [Recurrent linear-attention architectures](https://arxiv.org/abs/2510.26692) go further and fold the sequence into a fixed-size state, trading exact token-level access for bounded memory. Recent models combine these ideas: [DeepSeek-V4](https://arxiv.org/abs/2606.19348) uses Compressed Sparse Attention and Heavily Compressed Attention to reduce the sequence dimension of its KV cache, while [Kimi K3](https://arxiv.org/abs/2607.24653) mixes three recurrent Kimi Delta Attention layers with one global MLA layer, using the recurrent state for efficiency and periodic full attention to preserve expressivity. Either way, the context is not shorter from the agent's perspective — the model just stores and processes it in a compressed representation.
 
-KV cache compression has become a prolific research field over the past few years. Turning the memory savings reported in papers into actual latency and throughput gains, however, is much harder. Production inference engines rely on paged memory, fused attention kernels, continuous batching, prefix caching, and CUDA graphs. Changing the shape or precision of the cache can require modifications across this entire stack. As a recent [survey of system-aware KV cache optimization](https://arxiv.org/abs/2607.08057) notes, lower memory usage does not automatically produce end-to-end gains: the result also depends on conversion costs, kernel boundaries, and how well the method is integrated into the runtime.
-
-### Architecture-level compression
-
-Another option is to change the architecture itself. [Multi-head Latent Attention](https://arxiv.org/abs/2405.04434) compresses the keys and values of each token into a lower-dimensional latent representation. [Recurrent linear-attention architectures](https://arxiv.org/abs/2510.26692) go further and fold the sequence into a fixed-size state, trading exact token-level access for bounded memory.
-
-Recent models combine these ideas. [DeepSeek-V4](https://arxiv.org/abs/2606.19348) uses Compressed Sparse Attention and Heavily Compressed Attention to reduce the sequence dimension of its KV cache. [Kimi K3](https://arxiv.org/abs/2607.24653) mixes three recurrent Kimi Delta Attention layers with one global MLA layer, using the recurrent state for efficiency and periodic full attention to preserve expressivity.
-
-In architectural approaches such as MLA and recurrent attention, the context is not shorter from the agent’s perspective: the model stores and processes it in a compressed representation.
-
-### Application-level compaction
-
-At the application level, the simplest model-agnostic solution is **context compaction**. When the conversation approaches a threshold, the system asks a model to summarize the history, replaces the original messages with the summary, and continues.
+At the **application level**, the simplest model-agnostic solution is **context compaction**. When the conversation approaches a threshold, the system asks a model to summarize the history, replaces the original messages with the summary, and continues.
 
 If you have used a coding agent for a long enough session, you have probably seen this message:
 
@@ -48,7 +36,7 @@ If you have used a coding agent for a long enough session, you have probably see
 
 Compaction is effective, but coarse-grained. It works until it does not. A summary may preserve the current plan while quietly dropping why an earlier approach failed, a constraint introduced twenty turns ago, or the one error message that finally made the bug understandable. In coding, this can happen at exactly the worst moment: once the agent has accumulated enough task-specific state to make real progress.
 
-<blockquote class="twitter-tweet" data-dnt="true">
+<blockquote class="twitter-tweet" data-dnt="true" data-align="center" style="margin-left: auto; margin-right: auto;">
   <p lang="en" dir="ltr">The most dreadful output from a coding agent:<br><br>Context compacted</p>
   &mdash; Jean-Francois Puget (@JFPuget) <a href="https://x.com/JFPuget/status/2092598869167120704">August 26, 2026</a>
 </blockquote>
@@ -58,7 +46,7 @@ It is also worth understanding what compaction costs. Before generating a token,
 
 Current implementations therefore keep the decision simple: the harness watches the token count and triggers compaction near the limit. [Claude’s server-side compaction](https://platform.claude.com/docs/en/build-with-claude/compaction), for example, uses exactly this kind of token threshold.
 
-The harness knows that the context is full. The agent does not.
+**The harness knows that the context is full. The agent does not.**
 
 ## What comes next?
 
@@ -90,4 +78,4 @@ The harness still enforces the hard limits. The agent controls the semantics.
 
 We are not claiming that self-managed context is solved. The goal is to make the capability native and testable: can today’s models learn—or perhaps simply be prompted—to maintain their own working memory better than a fixed compaction policy?
 
-The next useful context window may not be a larger one. It may be one the agent knows how to manage.
+**The next useful context window may not be a larger one. It may be one the agent knows how to manage.**

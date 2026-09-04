@@ -50,10 +50,8 @@
   <line x1="522" y1="232" x2="522" y2="252" stroke="#8b96a3" stroke-width="2"/>
   <line x1="728" y1="232" x2="728" y2="252" stroke="#8b96a3" stroke-width="2"/>
 
-  <text x="72" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">0%</text>
-  <text x="344" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">roughly 40%</text>
-  <text x="522" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">roughly 60%</text>
-  <text x="728" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">maximum</text>
+  <text x="72" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">start</text>
+  <text x="728" y="278" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" fill="#586271">hard limit</text>
 
   <path d="M72 315 C170 296, 280 296, 344 315 S457 346, 522 315 S642 288, 728 315" fill="none" stroke="#364659" stroke-width="3"/>
   <circle cx="240" cy="300" r="5" fill="#2b8c7f"/>
