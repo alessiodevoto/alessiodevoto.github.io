@@ -12,9 +12,13 @@ If you have used AI agents for long enough, you know that an agent is only as go
 
 The model might be capable of solving the task. But if the relevant observation has disappeared under fifty tool calls, three failed plans, and thousands of lines of logs, that capability does not help much. Context is the agent’s working memory, and agent trajectories are particularly good at filling it with noise.
 
-A larger context window helps, but it does not solve the problem. We have known about effects such as [lost in the middle](https://arxiv.org/abs/2307.03172) for years. More recent work shows something even less convenient: [context length alone can hurt performance](https://arxiv.org/abs/2510.05381), even when the model retrieves the relevant information correctly and the additional tokens contain almost no distraction. This degradation is often called [context rot](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents): as context grows, the model gradually becomes less effective at using it.
+A larger context window helps, but it does not solve the problem. Long context comes with a bunch of issues. One is [lost in the middle](https://arxiv.org/abs/2307.03172): models can be much worse at using relevant information when it appears in the middle of a long prompt than when it appears near the beginning or the end. More recent work shows something even less convenient: [context length alone can hurt performance](https://arxiv.org/abs/2510.05381), even when the model retrieves the relevant information correctly and the additional tokens contain almost no distraction. This degradation is often called [context rot](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents): as context grows, the model gradually becomes less effective at using it.
 
 The maximum context window and the useful context window are not the same thing.
+
+Practitioners sometimes call the unreliable part of the window the **dumb zone**. The phrase shows up in HumanLayer/Dex Horthy’s material on [advanced context engineering for coding agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md), in posts that contrast the [smart zone and dumb zone](https://www.quevin.ai/blog/2025-12-13-context-engineering-smart-zone), and in broader summaries of [context-window management](https://agentpatterns.ai/context-engineering/context-window-dumb-zone/). I would treat this as a useful operational metaphor, not as a fixed benchmark threshold: where degradation starts depends on the model, the task, and the amount of noise in the trajectory.
+
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/agent-context/context-dumb-zone.svg" alt="Diagram showing a context window with a useful smart zone, a dumb zone, and hard limit pressure" style="max-width: 100%; width: 900px; display: block; margin: 1.5rem auto;">
 
 ## Compressing context at different levels
 
@@ -32,7 +36,7 @@ Another option is to change the architecture itself. [Multi-head Latent Attentio
 
 Recent models combine these ideas. [DeepSeek-V4](https://arxiv.org/abs/2606.19348) uses Compressed Sparse Attention and Heavily Compressed Attention to reduce the sequence dimension of its KV cache. [Kimi K3](https://arxiv.org/abs/2607.24653) mixes three recurrent Kimi Delta Attention layers with one global MLA layer, using the recurrent state for efficiency and periodic full attention to preserve expressivity.
 
-In architectural approaches such as MLA and recurrent attention, the context is not shorter from the agent’s perspective: the model stores and processes it in a compressed representation. KV cache compression is different. Depending on the method, it may quantize or merge cached states, or evict some tokens entirely. In the latter case, the model no longer has exact access to the evicted tokens, even though they remain in the agent’s textual history.
+In architectural approaches such as MLA and recurrent attention, the context is not shorter from the agent’s perspective: the model stores and processes it in a compressed representation.
 
 ### Application-level compaction
 
