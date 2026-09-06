@@ -1,0 +1,5 @@
+en: &DEFAULT_EN
+  follow_label: "Connect"
+
+en-US:
+  <<: *DEFAULT_EN
