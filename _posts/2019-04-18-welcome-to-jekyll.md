@@ -28,3 +28,9 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+<blockquote class="twitter-tweet" data-dnt="true" data-align="center" style="margin-left: auto; margin-right: auto;">
+  <p lang="en" dir="ltr">The most dreadful output from a coding agent:<br><br>Context compacted</p>
+  &mdash; Jean-Francois Puget (@JFPuget) <a href="https://x.com/JFPuget/status/2092598869167120704">August 26, 2026</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
