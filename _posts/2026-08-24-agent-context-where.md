@@ -18,7 +18,7 @@ A useful way to think about this is that every context window has a *smart zone*
 
 > The maximum context window and the useful context window are not the same thing.
 
-Why context rot happens is [an interesting question in its own right](https://proceedings.neurips.cc/paper_files/paper/2024/file/b1d35561c4a4a0e0b6012b2af531e149-Paper-Conference.pdf), and likely traces back to softmax attention having full support: as context length grows, the model struggles to distribute attention weight sharply enough to keep every token equally addressable. We set that question aside here. In what follows, we first review how context is managed today, then ask where things go next.
+Why context rot happens is [an interesting question in its own right](https://proceedings.neurips.cc/paper_files/paper/2024/file/b1d35561c4a4a0e0b6012b2af531e149-Paper-Conference.pdf), and likely traces back to softmax attention having full support: as context length grows, the model struggles to distribute attention weight sharply enough to keep every token equally addressable. For now we ignore this question and focus on how context is managed today, then ask where things go next.
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/agent-context/context-dumb-zone.svg" alt="Diagram showing a context window split into a smart zone and a dumb zone" style="max-width: 100%; width: 900px; display: block; margin: 1.5rem auto;">
 
@@ -64,7 +64,7 @@ This is already a research direction, and the attempts so far can be grouped int
 
 The first is training, distilling, or RL-ing the model to manage context. [AgentFold](https://arxiv.org/abs/2510.24699) and [Context-Folding](https://arxiv.org/abs/2510.11967) turn folding or compression into agent actions. [ACM](https://arxiv.org/abs/2607.23809) and [ContextPilot](https://arxiv.org/abs/2608.28476) add context offloading and retrieval tools, then teach the agent when to use them.
 
-The second is trying to one-shot the problem: give an unmodified model clearer state about its own context and see whether it can manage the budget without a learned policy. [VISTA](https://arxiv.org/abs/2606.30005) calls this *context proprioception*: block sizes, recency, archive status, remaining budget, and reversible archive/recovery tools exposed directly to the model.
+The second is trying to one-shot the problem: give an unmodified model clearer state about its own context and see whether it can manage the budget without a learned policy. [VISTA](https://arxiv.org/abs/2606.30005) calls this *context proprioception*: block sizes, recency, archive status, remaining budget, and reversible archive/recovery tools exposed directly to the model. [SideQuest](https://arxiv.org/pdf/2602.22603) takes a similar training-free stance at the KV cache level, using a "companion" model to perform the compression.
 
 But simply giving a model a `delete_context()` tool is not enough. The model must know how much space remains, which blocks are expensive, what has already been archived, and what it may need later. Even strong models struggle to infer this state from the raw prompt and to choose the right moment to intervene.
 
