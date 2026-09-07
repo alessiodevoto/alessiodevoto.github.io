@@ -5,7 +5,7 @@ author_profile: true
 title: "Your First Object-Oriented Agent"
 seo_title: "Build your first AI agent with NOOA — tools, typing, and state in plain Python"
 excerpt: "Build a BaristaAgent with NOOA — tools, typed outputs, and state in plain Python."
-published: true
+published: false
 ---
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alessiodevoto/labs-OO-Agents/blob/first-notebook-openai/notebook_tutorials/01_your_first_agent.ipynb) &nbsp; [![GitHub](https://img.shields.io/badge/notebook-GitHub-black?logo=github)](https://github.com/alessiodevoto/labs-OO-Agents/blob/first-notebook-openai/notebook_tutorials/01_your_first_agent.ipynb)
