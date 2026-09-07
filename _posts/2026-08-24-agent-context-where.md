@@ -5,7 +5,7 @@ author_profile: true
 title: "Agents and Context: Where We Stand"
 seo_title: "Agent harnesses and Context: Current state of the art agent harnesses about context management"
 excerpt: "Why agent context windows fail in practice, how current systems compact context, and why context management may become part of the agent action space."
-published: true
+published: false
 ---
 
 If you have used AI agents for long enough, you know that an agent is only as good as the context it receives.
